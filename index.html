@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,900&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Digital Design</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container _container">
+          <a href="" class="header__logo" id="top"> Exercise 1 </a>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="https://github.com/LanNc" class="menu__link">GitHub</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__main-block main-block">
+          <div class="main-block__container _container">
+            <div class="main-block__body">
+              <h1 class="main-block__title">Web security</h1>
+              <div class="main-block__text">
+                Ensuring that your website or open web application is secure is critical. Even
+                simple bugs in your code can result in private information being leaked, and bad
+                people are out there trying to find ways to steal data. The web security-oriented
+                articles listed here provide information that may help you secure your site and its
+                code from attacks and data theft.
+              </div>
+              <div class="main-block__buttons">
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web#documentation_for_web_developers"
+                  class="main-block__button main-block__button_orange"
+                  >Documentation for Web developers</a
+                >
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web#web_technology_references"
+                  class="main-block__button main-block__button_border"
+                  >Web technology references</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="main_block__image _ibg">
+            <img src="img/1.jpeg" alt="cover" />
+          </div>
+        </div>
+        <section class="page__services services">
+          <div class="services__container _container">
+            <div class="services__body">
+              <a href="#content_security" class="services__column">
+                <div class="services__item item-service">
+                  <div class="item-service__icon">
+                    <img src="img/icon/content.svg" alt="content" width="40px" />
+                  </div>
+                  <h3 class="item-service__title">Content security</h3>
+                  <div class="item-service__text">
+                    Ways to Protect User Content (Content Security Policy)
+                  </div>
+                </div>
+              </a>
+              <a href="#connection_security" class="services__column">
+                <div class="services__item item-service">
+                  <div class="item-service__icon">
+                    <img src="img/icon/connection.svg" alt="content" width="40px" />
+                  </div>
+                  <h3 class="item-service__title">Connection security</h3>
+                  <div class="item-service__text">Connection protection methods and options.</div>
+                </div>
+              </a>
+              <a href="#data_security" class="services__column">
+                <div class="services__item item-service">
+                  <div class="item-service__icon">
+                    <img src="img/icon/database.svg" alt="content" width="40px" />
+                  </div>
+                  <h3 class="item-service__title">Data security</h3>
+                  <div class="item-service__text">Database protection methods (HTTP Cookies)</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="page__article articles">
+          <div class="article__container _container">
+            <div class="articles__header header-block">
+              <h2 class="header-block__title" id="content_security">Content security</h2>
+              <div class="header-block__subtitle">
+                Content Security Policy (CSP)
+
+                <div class="articles__text">
+                  Content Security Policy (CSP) is an added layer of security that helps to detect
+                  and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and
+                  data injection attacks. These attacks are used for everything from data theft, to
+                  site defacement, to malware distribution. CSP is designed to be fully backward
+                  compatible (except CSP version 2 where there are some explicitly-mentioned
+                  inconsistencies in backward compatibility; more details
+                  <a href="https://www.w3.org/TR/CSP2/">here</a> section 1.1). Browsers that don't
+                  support it still work with servers that implement it, and vice-versa: browsers
+                  that don't support CSP ignore it, functioning as usual, defaulting to the standard
+                  same-origin policy for web content. If the site doesn't offer the CSP header,
+                  browsers likewise use the standard same-origin policy. To enable CSP, you need to
+                  configure your web server to return the Content-Security-Policy HTTP header.
+                  (Sometimes you may see mentions of the
+                  <code>X-Content-Security-Policy</code> header, but that's an older version and you
+                  don't need to specify it anymore.)
+                </div>
+                <div class="image_with_p">
+                  <img src="/img/csp.jpg" alt="csp" width="1000" />
+                  <p>Work example</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <article class="page__article articles">
+          <div class="article__container _container">
+            <div class="articles__header header-block">
+              <h2 class="header-block__title" id="connection_security">Connection security</h2>
+              <div class="header-block__subtitle">
+                Transport Layer Security
+                <div class="articles__text">
+                  The security of any connection using Transport Layer Security (TLS) is heavily
+                  dependent upon the cipher suites and security parameters selected. This article's
+                  goal is to help you make these decisions to ensure the confidentiality and
+                  integrity communication between client and server. The Mozilla Operations Security
+                  (OpSec) team
+                  <a href="https://wiki.mozilla.org/Security/Server_Side_TLS"
+                    >maintains a wiki entry</a
+                  >
+                  with reference configurations for servers. The Transport Layer Security (TLS)
+                  protocol is the standard for enabling two networked applications or devices to
+                  exchange information privately and robustly. Applications that use TLS can choose
+                  their security parameters, which can have a substantial impact on the security and
+                  reliability of data. This article provides an overview of TLS and the kinds of
+                  decisions you need to make when securing your content.
+                </div>
+                <div class="articles__subcontent">
+                  <div class="articles__header header-block">
+                    <h2 class="header-block__title-subcontent">History</h2>
+                    <div class="articles__text">
+                      When HTTPS was introduced, it was based on Secure Sockets Layer (SSL) 2.0, a
+                      technology introduced by Netscape. It was updated to SSL 3.0 not long after,
+                      and as its usage expanded, it became clear that a common, standard encryption
+                      technology needed to be specified to ensure interoperability among all web
+                      browsers and servers. The Internet Engineering Task Force (IETF) specified TLS
+                      1.0 in RFC 2246 in January, 1999. The current version of TLS is 1.3 (RFC
+                      8446). Despite the fact that the web now uses TLS for encryption, many people
+                      still refer to it as "SSL" out of habit. Although TLS can be used on top of
+                      any low-level transport protocol, the original goal of the protocol was to
+                      encrypt HTTP traffic. HTTP encrypted using TLS is commonly referred to as
+                      HTTPS. TLS-encrypted web traffic is by convention exchanged on port 443 by
+                      default, while unencrypted HTTP uses port 80 by default. HTTPS remains an
+                      important use case for TLS.
+                    </div>
+                  </div>
+                  <div class="articles__header header-block">
+                    <h2 class="header-block__title-subcontent">HTTP over TLS</h2>
+                    <div class="articles__text">
+                      TLS provides three primary services that help ensure the safety and security
+                      of data exchanged with it:
+                    </div>
+                    <p>Authentication</p>
+                    <div class="articles__text">
+                      Authentication lets each party to the communication verify that the other
+                      party is who they claim to be.
+                    </div>
+                    <p>Encryption</p>
+                    <div class="articles__text">
+                      Data is encrypted while being transmitted between the user agent and the
+                      server, in order to prevent it from being read and interpreted by unauthorized
+                      parties.
+                    </div>
+                    <p>Integrity</p>
+                    <div class="articles__text">
+                      TLS ensures that between encrypting, transmitting, and decrypting the data, no
+                      information is lost, damaged, tampered with, or falsified.TLS ensures that
+                      between encrypting, transmitting, and decrypting the data, no information is
+                      lost, damaged, tampered with, or falsified.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="article__container _container">
+            <div class="articles__header header-block">
+              <h2 class="header-block__title" id="data_security">Data security</h2>
+              <div class="header-block__subtitle">Using HTTP Cookies</div>
+
+              <div class="articles__text">
+                An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server
+                sends to a user's web browser. The browser may store the cookie and send it back to
+                the same server with later requests. Typically, an HTTP cookie is used to tell if
+                two requests come from the same browser—keeping a user logged in, for example. It
+                remembers stateful information for the stateless HTTP protocol.
+                <br />
+                Cookies are mainly used for three purposes: <br />
+                <p>Session management</p>
+                Logins, shopping carts, game scores, or anything else the server should remember
+                <p>Personalization</p>
+                User preferences, themes, and other settings
+                <p>Tracking</p>
+                Recording and analyzing user behavior
+                <br />
+                Cookies were once used for general client-side storage. While this made sense when
+                they were the only way to store data on the client, modern storage APIs are now
+                recommended. Cookies are sent with every request, so they can worsen performance
+                (especially for mobile data connections). Modern APIs for client storage are the Web
+                Storage API (localStorage and sessionStorage) and IndexedDB.
+              </div>
+
+              <div class="header-block__subtitle">Window.localStorage</div>
+
+              <div class="articles__text">
+                The <code>localStorage</code> read-only property of the
+                <a href="/en-US/docs/Web/API/Window"><code>window</code></a> interface allows you to
+                access a <a href="/en-US/docs/Web/API/Storage"><code>Storage</code></a> object for
+                the <a href="/en-US/docs/Web/API/Document"><code>Document</code></a
+                >'s <a href="/en-US/docs/Glossary/Origin">origin</a>; the stored data is saved
+                across browser sessions.
+
+                <code>localStorage</code> is similar to
+                <a href="/en-US/docs/Web/API/Window/sessionStorage" title="sessionStorage"
+                  ><code>sessionStorage</code></a
+                >, except that while <code>localStorage</code> data has no expiration time,
+                <code>sessionStorage</code> data gets cleared when the page session ends — that is,
+                when the page is closed. (<code>localStorage</code> data for a document loaded in a
+                "private browsing" or "incognito" session is cleared when the last "private" tab is
+                closed.)
+              </div>
+              <div class="header-block__subtitle">Description</div>
+              <div class="articles__text">
+                The keys and the values stored with <code>localStorage</code> are <em>always</em> in
+                the UTF-16
+                <a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a> format, which
+                uses two bytes per character. As with objects, integer keys are automatically
+                converted to strings.
+
+                <code>localStorage</code> data
+                <strong>is specific to the protocol of the document</strong>. In particular, for a
+                site loaded over HTTP (e.g., <code>http://example.com</code>),
+                <code>localStorage</code> returns a different object than
+                <code>localStorage</code> for the corresponding site loaded over HTTPS (e.g.,
+                <code>https://example.com</code>). For documents loaded from <code>file:</code> URLs
+                (that is, files opened in the browser directly from the user's local filesystem,
+                rather than being served from a web server) the requirements for
+                <code>localStorage</code> behavior are undefined and may vary among different
+                browsers. In all current browsers, <code>localStorage</code> seems to return a
+                different object for each <code>file:</code> URL. In other words, each
+                <code>file:</code> URL seems to have its own unique local-storage area. But there
+                are no guarantees about that behavior, so you shouldn't rely on it because, as
+                mentioned above, the requirements for <code>file:</code> URLs remains undefined. So
+                it's possible that browsers may change their <code>file:</code> URL handling for
+                <code>localStorage</code> at any time. In fact some browsers <em>have</em> changed
+                their handling for it over time.
+              </div>
+              <div class="header-block__subtitle">A source:</div>
+              <div class="articles__text">
+                <p>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/Security#data_security"
+                    >https://developer.mozilla.org/en-US/docs/Web/Security#data_security</a
+                  >
+                </p>
+                <p>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+                    >https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP</a
+                  >
+                </p>
+                <p>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/Security#data_security"
+                    >https://developer.mozilla.org/en-US/docs/Web/Security#data_security</a
+                  >
+                </p>
+                <p>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/Security#data_security"
+                    >https://developer.mozilla.org/en-US/docs/Web/Security#data_security</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <a class="btn" href="#top">Top of the page</a>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
